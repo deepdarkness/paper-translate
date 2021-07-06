@@ -1,0 +1,5 @@
+site_name: Paper Translate
+theme:
+    name: readthedocs
+    highlightjs: true
+
