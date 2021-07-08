@@ -54,7 +54,7 @@ FT的生产版本都只支持单处理器vm。 记录和回放多处理器VM的�
 
 ![alt Figure 1: Basic FT Configuration](vm-ft-1.png)
 
-**图1 基础FT配置**
+<div style="text-align: center; font-weight:bold;">图1 基础FT配置</div>
 
 > Bressoud [3] describes a prototype implementation of fault-tolerant VMs for the HP PARISC platform. Our approach is similar, but we have made some fundamental changes for performance reasons and investigated a number of design alternatives. In addition, we have had to design and implement many additional components in the system and deal with a number of practical issues to build a complete system that is efficient and usable by customers running enterprise applications. Similar to most other practical systems discussed, we only attempt to deal with fail-stop failures [12], which are server failures that can be detected before the failing server causes an incorrect externally visible action.
 
@@ -156,7 +156,7 @@ Bressoud提到了将虚拟机的执行分为周期，不确定性事件比如中
 
 ![alt Figure 2: FT Protocol](vm-ft-2.png)
 
-**图2 FT协议**
+<div style="text-align: center; font-weight:bold;">图1 FT协议</div>
 
 > As an example, we show a chart illustrating the requirements of the FT protocol in Figure 2. This figure shows a timeline of events on the primary and backup VMs. The arrows going from the primary line to the backup line represent the transfer of log entries, and the arrows going from the backup line to the primary line represent acknowledgments. Information on asynchronous events, inputs, and output operations must be sent to the backup as log entries and acknowledged. As illustrated in the figure, an output to the external world is delayed until the primary VM has received an acknowledgment from the backup VM that it has received the log entry associated with an output operation. Given that the Output Rule is followed, the backup VM will be able to take over in a state consistent with the primary’s last output. There will be no loss of state even if the primary has had a non-deterministic event since its last output.
 
