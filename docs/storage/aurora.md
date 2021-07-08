@@ -70,7 +70,7 @@ Amazon Aurora 是一种用于 OLTP 工作负载的关系数据库服务，作为
 
 如果数据库系统什么都不做，它必须满足数据一旦写入就可以读取的约定。 并非所有系统都这样。 在本节中，我们将讨论仲裁模型背后的基本原理、为什么要对存储进行分段，以及两者结合如何不仅提供持久性、可用性和减少抖动，还可以帮助我们解决管理存储队列的操作问题 规模。
 
-### 2.1 ReplicationandCorrelatedFailures
+### 2.1 Replication and Correlated Failures
 
 > Instance lifetime does not correlate well with storage lifetime. Instances fail. Customers shut them down. They resize them up and down based on load. For these reasons, it helps to decouple the storage tier from the compute tier.
 
